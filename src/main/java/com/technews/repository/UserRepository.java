@@ -1,4 +1,4 @@
 package com.technews.repository;
 
-public class UserRepository {
+public interface UserRepository {
 }
