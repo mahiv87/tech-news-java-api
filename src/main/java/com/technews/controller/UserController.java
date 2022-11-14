@@ -35,7 +35,7 @@ public class UserController {
 
     @GetMapping("/api/users/{id}")
     public User getUserById(@PathVariable Integer id) {
-        User returnUser = repository.getById(id);
+        User returnUser = repository.getReferenceById(id);
         List<Post> postList = returnUser.getPosts();
         for (Post p : postList) {
             p.setVoteCount(voteRepository.countVotesByPostId(p.getId()));
